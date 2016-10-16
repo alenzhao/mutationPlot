@@ -25,8 +25,6 @@ mutationPlot(NCBI_Build = "37", varForAxisYup = varForAxisYup, varForAxisYdown =
 
 mutationPlot(NCBI_Build = "37", varForAxisYup = "counts", varForAxisYdown = "counts", drawOnlyTranscript = FALSE, outputFormat = "ps", mutationTypeDown=c("Nonsense","Frameshift"), mutationTypeUp=c("Missense"), onlyExons=TRUE, databaseUp = "Somatic Mutation Data,", databaseDown = "Somatic Mutation Data,", typeOfGeneName = "hgnc", gene="ARID1A", drawInteractive=TRUE)
 ```
-
-<br />
 <br />
 <img src="images/tool_.bmp" width="400">
 
