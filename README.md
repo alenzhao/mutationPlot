@@ -1,7 +1,7 @@
 # mutationPlot
 ======Prerequisites=====
 
-Download the file with somatic mutations:
+Download and unzip the file with somatic mutations:
 
 http://elledgelab.med.harvard.edu/wp-content/uploads/2013/11/Mutation_Dataset.txt.zip 
 
