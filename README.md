@@ -1,6 +1,11 @@
 # mutationPlot
 ======Prerequisites=====
 
+Download the file with somatic mutations:
+
+http://elledgelab.med.harvard.edu/wp-content/uploads/2013/11/Mutation_Dataset.txt.zip 
+
+Necessary R libraries:
 ```R
 library(biomaRt)
 library(ggplot2)
@@ -19,9 +24,9 @@ require(stats)
 ```R
 source("mutationPlot.R")
 
-mutationPlot(NCBI_Build = "37", varForAxisYup = varForAxisYup, varForAxisYdown = varForAxisYdown, drawOnlyTranscript = FALSE, outputFormat = "ps", mutationTypeDown=c("Nonsense","Frameshift"), mutationTypeUp=c("Nonsense","Frameshift"), onlyExons=FALSE, databaseUp = "ExAC Data,", databaseDown = "Somatic Mutation Data,", useDavoliData=TRUE, DataFile="selected_AC_Missene.csv", typeOfGeneName = "hgnc", gene="BRCA2")
+mutationPlot(NCBI_Build = "37", varForAxisYup = varForAxisYup, varForAxisYdown = varForAxisYdown, drawOnlyTranscript = FALSE, outputFormat = "ps", mutationTypeDown=c("Nonsense","Frameshift"), mutationTypeUp=c("Nonsense","Frameshift"), onlyExons=FALSE, databaseUp = "ExAC Data,", databaseDown = "Somatic Mutation Data,", useDavoliData=TRUE, DataFile="externalDataFile.csv", typeOfGeneName = "hgnc", gene="BRCA2")
 
-mutationPlot(NCBI_Build = "37", varForAxisYup = varForAxisYup, varForAxisYdown = varForAxisYdown, varForShape="LOF", drawOnlyTranscript = FALSE, outputFormat = "ps", mutationTypeDown=c("Nonsense","Frameshift"), mutationTypeUp=c("Nonsense","Frameshift"), onlyExons=TRUE, databaseUp = "ExAC Data,", databaseDown = "Somatic Mutation Data,", useDavoliData=TRUE, DataFile="selected_AC_Missene.csv", typeOfGeneName = "hgnc", gene="BRCA2", drawInteractive=TRUE)
+mutationPlot(NCBI_Build = "37", varForAxisYup = varForAxisYup, varForAxisYdown = varForAxisYdown, varForShape="LOF", drawOnlyTranscript = FALSE, outputFormat = "ps", mutationTypeDown=c("Nonsense","Frameshift"), mutationTypeUp=c("Nonsense","Frameshift"), onlyExons=TRUE, databaseUp = "ExAC Data,", databaseDown = "Somatic Mutation Data,", useDavoliData=TRUE, DataFile="externalDataFile.csv", typeOfGeneName = "hgnc", gene="BRCA2", drawInteractive=TRUE)
 
 mutationPlot(NCBI_Build = "37", varForAxisYup = "counts", varForAxisYdown = "counts", drawOnlyTranscript = FALSE, outputFormat = "ps", mutationTypeDown=c("Nonsense","Frameshift"), mutationTypeUp=c("Missense"), onlyExons=TRUE, databaseUp = "Somatic Mutation Data,", databaseDown = "Somatic Mutation Data,", typeOfGeneName = "hgnc", gene="ARID1A", drawInteractive=TRUE)
 ```
